@@ -22,7 +22,7 @@ class WebhooksController < ApplicationController
   private
 
   def handle_charge_succeeded(charge)
-    Rails.logger.Info "Charge succeeded: #{charge['id']}"
+    Rails.logger.info "Charge succeeded: #{charge['id']}"
 
     render json: {
       status: :success,

@@ -9,7 +9,7 @@ class StripeService
     Stripe::Charge.create({
                             amount:,
                             currency:,
-                            source: 'tok_visa',
+                            source: 'tok_visa', # This should be user payment method
                             description: 'Charge created with StripeService'
                           })
   rescue Stripe::StripeError => e

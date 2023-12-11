@@ -1,0 +1,104 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.stripe.com/v1/refunds
+    body:
+      encoding: UTF-8
+      string: charge=ch_3OMBOlLyNOJh737A0XYZSXuj
+    headers:
+      User-Agent:
+      - Stripe/v1 RubyBindings/10.2.0
+      Authorization:
+      - Bearer sk_test_51OM7uULyNOJh737AHUU8W5KShUyBuDSqSxEKabjyw31TVmwg5cfauQdPEZWMmZ4mmOq9fYBkDdDCj7x68o7N9Tir00K0acAvnM
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-Telemetry:
+      - '{"last_request_metrics":{"request_id":"req_RjRz0XKwymZfpJ","request_duration_ms":14}}'
+      Stripe-Version:
+      - '2023-10-16'
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"10.2.0","lang":"ruby","lang_version":"3.2.2 p53 (2023-03-30)","platform":"arm64-darwin21","engine":"ruby","publisher":"stripe","uname":"Darwin
+        My-MacBook-Pro.local 21.6.0 Darwin Kernel Version 21.6.0: Mon Aug 22 20:20:07
+        PDT 2022; root:xnu-8020.140.49~2/RELEASE_ARM64_T8110 arm64","hostname":"My-MacBook-Pro.local"}'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 11 Dec 2023 15:36:03 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '590'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET,HEAD,PUT,PATCH,POST,DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Request-Id, Stripe-Manage-Version, Stripe-Should-Retry, X-Stripe-External-Auth-Required,
+        X-Stripe-Privileged-Session-Required
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Content-Security-Policy:
+      - report-uri https://q.stripe.com/csp-report?p=v1%2Frefunds; block-all-mixed-content;
+        default-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none';
+        img-src 'self'; script-src 'self' 'report-sample'; style-src 'self'
+      Idempotency-Key:
+      - d2565d85-a487-45d7-a734-44ef2d3f5dd9
+      Original-Request:
+      - req_WOuD3muAfwfhyE
+      Request-Id:
+      - req_WOuD3muAfwfhyE
+      Stripe-Should-Retry:
+      - 'false'
+      Stripe-Version:
+      - '2023-10-16'
+      Vary:
+      - Origin
+      X-Stripe-Routing-Context-Priority-Tier:
+      - api-testmode
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains; preload
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "id": "re_3OMBOlLyNOJh737A0nQQ4P4E",
+          "object": "refund",
+          "amount": 1000,
+          "balance_transaction": "txn_3OMBOlLyNOJh737A0XofdYCO",
+          "charge": "ch_3OMBOlLyNOJh737A0XYZSXuj",
+          "created": 1702308963,
+          "currency": "usd",
+          "destination_details": {
+            "card": {
+              "reference_status": "pending",
+              "reference_type": "acquirer_reference_number",
+              "type": "refund"
+            },
+            "type": "card"
+          },
+          "metadata": {},
+          "payment_intent": null,
+          "reason": null,
+          "receipt_number": null,
+          "source_transfer_reversal": null,
+          "status": "succeeded",
+          "transfer_reversal": null
+        }
+  recorded_at: Mon, 11 Dec 2023 15:36:03 GMT
+recorded_with: VCR 6.2.0

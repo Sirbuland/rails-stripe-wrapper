@@ -31,6 +31,7 @@ class StripeService
   def handle_error(error, message)
     Rails.logger.error("#{message}: #{error.message}")
 
+    # Using Struct to be able to use dot notation in parent
     OpenStruct.new(status: 'failed', message: "#{message}: #{error.message}")
   end
 end

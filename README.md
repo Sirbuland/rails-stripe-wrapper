@@ -1,24 +1,20 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
 * Ruby version
+  - 3.2.2
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
+* Rails version
+  - 7.1.2
 
 * How to run the test suite
+  - bundle exec rspec
 
-* Services (job queues, cache servers, search engines, etc.)
+* Setup environment variables
+  - Create .env file at root directory and add these environment variables in it
+  ```
+  STRIPE_API_KEY = YOUR_STRIPE_API_KEY
+  STRIPE_WEBHOOK_SECRET = YOUR_STRIPE_WEBHOOK_SECRET
+  ```
 
-* Deployment instructions
-
-* ...
+* Setup stripe webhook
+  - Need to create webhook on stripe for charge.succeeded and charge.refunded events
